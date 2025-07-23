@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, onSearch, 
             
             <img src="/assets/logo.png" alt="WanderIndia Logo" className="h-12" /> {/* Updated to use logo.png */}
           </div>
-
+{/* image is not  reflect */}
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
