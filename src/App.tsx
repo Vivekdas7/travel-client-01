@@ -41,7 +41,7 @@ function App() {
       description: 'Explore the mystical Spiti Valley with its ancient monasteries, high-altitude desert landscapes, and unique culture.',
       price: '₹38,000',
       duration: '6 Days / 5 Nights',
-      image: 'https://images.pexels.com/photos/4825689/pexels-photo-4825689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      image: 'https://images.pexels.com/photos/31756488/pexels-photo-31756488.jpeg',
       highlights: ['Key Monastery', 'Chandratal Lake', 'Pin Valley', 'Dhankar Monastery'],
       included: ['Hotel Accommodation', 'All Meals', 'Transportation', 'Professional Guide']
     },
