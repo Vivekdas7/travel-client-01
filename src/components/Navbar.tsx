@@ -19,21 +19,24 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, onSearch, 
     { id: 'contact', label: 'Contact' },
   ];
 
+  // Filter navItems based on searchQuery
+  const filteredNavItems = navItems.filter(item =>
+    item.label.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => setCurrentPage('home')}>
-            
-            
-            <img src="/assets/logo.png" alt="logo" className="h-12" /> {/* Ensure this path is correct */}
+            <img src="/assets/logo.png" alt="logo" className="h-12" />
           </div>
-{/* image is not  reflect */}
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
-              {navItems.map((item) => (
+              {filteredNavItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setCurrentPage(item.id)}
@@ -56,7 +59,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, onSearch, 
                 type="text"
                 placeholder="Search destinations..."
                 value={searchQuery}
-                onChange={(e) => onSearch(e.target.value)}
+                onChange={(e) => onSearch(e.target.value)} // Call onSearch to update the search query
                 className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
@@ -84,13 +87,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, onSearch, 
                   type="text"
                   placeholder="Search destinations..."
                   value={searchQuery}
-                  onChange={(e) => onSearch(e.target.value)}
+                  onChange={(e) => onSearch(e.target.value)} // Call onSearch to update the search query
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
               </div>
 
-              {navItems.map((item) => (
+              {filteredNavItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => {
