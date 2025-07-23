@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage, onSearch, 
           <div className="flex items-center cursor-pointer" onClick={() => setCurrentPage('home')}>
             
             
-            <img src="/logo.png" alt="logo" className="h-12" /> {/* Updated to use logo from public directory */}
+            <img src="/assets/logo.png" alt="logo" className="h-12" /> {/* Ensure this path is correct */}
           </div>
 {/* image is not  reflect */}
           {/* Desktop Navigation */}
