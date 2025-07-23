@@ -56,15 +56,15 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ packages, onViewPackage }) 
       {/* Content */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
         <div className="text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in pt-20">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-6 animate-fade-in pt-20"> {/* Adjusted font size for mobile */}
             Explore Incredible India
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 opacity-90"> {/* Adjusted font size for mobile */}
             Discover breathtaking destinations and create memories that last a lifetime
           </p>
 
           {/* Featured Package Card */}
-          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto border border-white border-opacity-20">
+          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-4 max-w-2xl mx-auto border border-white border-opacity-20 flex flex-col justify-center items-center mb-8 md:mb-0 overflow-hidden">
             <div className="flex items-center justify-center mb-4">
               <div className="flex items-center text-yellow-400 mr-4">
                 <Star className="h-5 w-5 fill-current" />
@@ -73,26 +73,26 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ packages, onViewPackage }) 
                 <Star className="h-5 w-5 fill-current" />
                 <Star className="h-5 w-5 fill-current" />
               </div>
-              <span className="text-white font-semibold">Featured Package</span>
+              <span className="text-white font-semibold text-sm md:text-base">Featured Package</span> {/* Adjusted font size for mobile */}
             </div>
             
-            <h2 className="text-3xl font-bold mb-4">{currentPackage.name}</h2>
-            <p className="text-lg mb-6 opacity-90">{currentPackage.description}</p>
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">{currentPackage.name}</h2> {/* Adjusted font size for mobile */}
+            <p className="text-base md:text-lg mb-6 opacity-90">{currentPackage.description}</p> {/* Adjusted font size for mobile */}
             
             <div className="flex items-center justify-center space-x-6 mb-6">
               <div className="flex items-center">
                 <Calendar className="h-5 w-5 mr-2" />
-                <span>{currentPackage.duration}</span>
+                <span className="text-sm md:text-base">{currentPackage.duration}</span> {/* Adjusted font size for mobile */}
               </div>
               <div className="flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                <span>2-8 People</span>
+                <span className="text-sm md:text-base">2-8 People</span> {/* Adjusted font size for mobile */}
               </div>
             </div>
 
             <div className="flex items-center justify-center space-x-4">
-              <span className="text-3xl font-bold">{currentPackage.price}</span>
-              <span className="text-lg opacity-75">per person</span>
+              <span className="text-xl md:text-3xl font-bold">{currentPackage.price}</span> {/* Adjusted font size for mobile */}
+              <span className="text-sm md:text-lg opacity-75">per person</span> {/* Adjusted font size for mobile */}
             </div>
 
             <div className="flex space-x-4 mt-6">

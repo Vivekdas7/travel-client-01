@@ -16,6 +16,7 @@ const Home: React.FC<HomeProps> = ({ packages, onViewPackage }) => {
     <div>
       {/* Hero Carousel */}
       <HeroCarousel packages={packages} onViewPackage={onViewPackage} />
+     
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
@@ -62,6 +63,9 @@ const Home: React.FC<HomeProps> = ({ packages, onViewPackage }) => {
               <p className="text-gray-600">Recognized for excellence in travel services</p>
             </div>
           </div>
+
+          {/* Horizontal Line for Mobile */}
+          <hr className="block md:hidden border-t border-gray-300 my-4" />
         </div>
       </section>
 
